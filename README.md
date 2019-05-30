@@ -1,10 +1,10 @@
-# RTView-Flogo  - RTView Integration with Flogo
+# RTView-Flogo  - RTView Integration with Project Flogo
 
 ## Overview
 
-RTView can be used to present real-time monitoring data from Flogo applications.  The data shown can be either built-in data collected about Flogo Events, Instances, and Tasks.  Additionally, the user may define data tables that are specific to the application being monitored.
+Project Flogo provides powerful tools to build microservices with an ultralight framework that takes advantage of new IoT, edge, and serverless application architectures. With TIBCO's Flogo® Enterprise, data can be collected or analyzed locally on the smallest of IoT devices, so decisions and actions can be made in real time.
 
-The `RTView-Javascript` repository  provides instructions and examples showing how to push real-time monitoring data from a Javascript application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time.
+This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be either built-in data collected about Flogo Events, Instances, and Tasks.  Additionally, the user may define data tables that are specific to the application being monitored.
 
 RTView is a real-time data management, visualization and analytics engine provided by SL Corporation (www.sl.com). It is used by organizations worldwide as a key component of mission-critical monitoring and control systems, built around various middleware, infrastructure, telemetry and IoT data sources.
 
@@ -106,7 +106,7 @@ Close the dialog.
 On the RTView Cloud top menu bar, click on Design to invoke the RTDraw visual editing tool.
 Select the File dropdown menu and click on Import.
 Select "as Private". 
-In the file browser, navigate to the RTView-JavaSccript directory within this project on your computer.
+In the file browser, navigate to the RTView-JavaScript directory within this project on your computer.
 Select the SimpleExample.json and click Open.
 ```
 * View or edit the sample display:
