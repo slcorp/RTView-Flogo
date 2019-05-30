@@ -1,0 +1,20 @@
+{
+  "name": "define_caches",
+  "version": "1.0.0",
+  "description": "A simple Node.js script that defines caches in an RTView Data Server",
+  "keywords": [
+    "real-time",
+    "rtview"
+  ],
+  "homepage": "http://www.sl.com",
+  "main": "define_caches.js",
+  "scripts": {
+    "start": "node define_caches.js"
+  },
+  "engines": [
+    "node"
+  ],
+  "dependencies": {
+    "rtview-utils": ""
+  }
+}

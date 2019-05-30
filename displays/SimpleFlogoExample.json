@@ -1,0 +1,178 @@
+{
+    "modifiedDate": "2018-11-30T11:28:15.217Z",
+    "viewport": {
+        "x": 0,
+        "y": 0,
+        "scale": 1
+    },
+    "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 600,
+        "resizable": false,
+        "margin": 0
+    },
+    "localVars": {
+        "sensor_id": "Sensor-1"
+    },
+    "styleSheet": {},
+    "linksRoute": "Angled",
+    "portsLayout": "Edge",
+    "layout": "",
+    "version": "1.51.0",
+    "nodeDataArray": [
+        {
+            "key": 4,
+            "category": "extern-custom-table",
+            "bgVisible": true,
+            "size": "774 256",
+            "rowSeriesFlag": true,
+            "bgBorderVisible": true,
+            "bgBorderColor": "#cccccc",
+            "bgBorderWidth": 1,
+            "bgBorderRadius": 0,
+            "pos": "400 186.5",
+            "bindings": {
+                "component": {
+                    "cache": "SensorData",
+                    "value": "*",
+                    "url": "SIMPLE-EXAMPLE-SERVER",
+                    "table": "current",
+                    "type": "cache"
+                }
+            },
+            "columns": {
+                "id": {
+                    "title": "Device<br>ID",
+                    "width": 150
+                },
+                "type": {
+                    "title": "Device<br>Type",
+                    "width": 150
+                },
+                "name": {
+                    "title": "Name",
+                    "width": 150
+                },
+                "model": {
+                    "title": "Model",
+                    "width": 150
+                },
+                "serialnumber": {
+                    "title": "Serial #",
+                    "width": 150
+                },
+                "status": {
+                    "title": "Status",
+                    "width": 150
+                },
+                "owner": {
+                    "title": "Owner",
+                    "width": 150,
+                    "hidden": true
+                }
+            },
+            "miscProps": {},
+            "drilldown": {
+                "name": ".",
+                "vars": {
+                    "device_id": {
+                        "column": "id"
+                    }
+                }
+            }
+        },
+        {
+            "key": 13,
+            "category": "extern-trendchart",
+            "bgVisible": true,
+            "size": "744 210",
+            "fillFlag": false,
+            "legendVisFlag": true,
+            "legendPos": "right",
+            "scrollFlag": false,
+            "stripFlag": true,
+            "pos": "400 480",
+            "bgBorderVisible": false,
+            "bgBorderColor": "#cccccc",
+            "bgBorderWidth": 1,
+            "bgBorderRadius": 0,
+            "bindings": {
+                "component": {
+                    "url": "SIMPLE-EXAMPLE-SERVER",
+                    "cache": "SensorData",
+                    "table": "current",
+                    "timeRange": -1,
+                    "filter": {
+                        "ID": "$sensor_id"
+                    },
+                    "type": "cache_advanced"
+                }
+            }
+        },
+        {
+            "key": 19,
+            "category": "extern-cachectrl2",
+            "bgVisible": true,
+            "size": "266 44",
+            "server": "SIMPLE-EXAMPLE-SERVER",
+            "cache": "SensorData",
+            "autoSelect": true,
+            "setGlobals": false,
+            "indexColumns": "ID",
+            "bgVis": false,
+            "pos": "550 352",
+            "serverURL": "http://localhost:3270/rtvquery",
+            "miscProps": {
+                "columns": {
+                    "ID": {
+                        "title": " ",
+                        "varToSet": "sensor_id"
+                    }
+                }
+            }
+        },
+        {
+            "key": 2,
+            "size": "259 48",
+            "figure": "Rectangle",
+            "category": "General",
+            "bgVisible": true,
+            "bgBorderVisible": false,
+            "labelVisible": false,
+            "valueVisible": true,
+            "valueText": "Current Data For Sensors",
+            "valueWrap": true,
+            "labelAlignment": {
+                "horizontal": "Left",
+                "vertical": "Center"
+            },
+            "labelFont": "normal normal 12pt sans-serif",
+            "valueFont": "normal bold 14pt external:\"Open Sans\"",
+            "pos": "400 30",
+            "valueColor": "#35638b"
+        },
+        {
+            "key": -8,
+            "size": "232 48",
+            "figure": "Rectangle",
+            "category": "General",
+            "bgVisible": true,
+            "bgBorderVisible": false,
+            "labelVisible": false,
+            "valueVisible": true,
+            "valueText": "Historical Data For ",
+            "valueWrap": true,
+            "labelAlignment": {
+                "horizontal": "Left",
+                "vertical": "Center"
+            },
+            "labelFont": "normal normal 12pt sans-serif",
+            "valueFont": "normal bold 14pt external:\"Open Sans\"",
+            "pos": "400 350",
+            "valueColor": "#35638b"
+        }
+    ],
+    "linkDataArray": []
+}
