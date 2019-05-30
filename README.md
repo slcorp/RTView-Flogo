@@ -24,9 +24,9 @@ By following the steps described below you will:
 ## Requirements
 To run this project, you will need to have installed on your computer:
 ```
-Node.js version 6 or higher
+Node.js version 6 or higher    (for running the program to define caches)
 
-Java version 1.7 or higher
+Java version 1.8 or higher     (if you are running the DataServer locally)
 ```
 
 ## Create an RTView Cloud account
@@ -59,6 +59,13 @@ At any time you can stop the server:
 ```
 stop_server           (or ./stop_server.sh in Linux)
 ```
+
+NOTE: For convenience,and for production deployments, the RTView DataServer is available on the Google Cloud Marketplace. Simply go to the URL below in your browser:
+```
+    https://cloud.google.com/marketplace/
+```
+Select Explore Marketplace and search for RTView. Select the RTView DataServer to see your options for launching an instance in your own Google Cloud account with a single click. This version provides persistent data storage and is fully enabled with all advanced features of RTView.
+
 ## Run the define_caches program
 
 Clone the RTView-Flogo repo to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program defines a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache for display within RTView Cloud.
