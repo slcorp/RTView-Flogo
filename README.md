@@ -8,8 +8,6 @@ RTView is a real-time data management, visualization and analytics engine provid
 
 This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be either built-in data collected about Flogo Events, Instances, and Tasks.  Additionally, the user may define data tables that are specific to the application being monitored.
 
-The RTView DataServer is the data management component that provides in-memory caching and archival to persistent storage. Data stored there may be consumed by displays, dashboards, reports and alerts provided by a visualization and analytics tool such as RTView Cloud.
-
 One of the sample displays created in this example is shown below:
 
 ![](SensorData.jpg)
@@ -40,6 +38,10 @@ Note that you are automatically placed into your own private organization (e.g. 
 	
 ## Download and run the RTView DataServer	
 
+The RTView DataServer is the data management component that provides in-memory caching and optional archival to persistent storage. Data stored there may be consumed by displays, dashboards, reports and alerts provided by a visualization and analytics tool such as RTView Cloud. You can download and launch the RTView DataServer in your own environment, or you can elect a single-click deployment in one of several common Cloud Platforms.
+
+If you would like to run the RTView DataServer in your own environment, follow the instructons below. 
+
 * From your RTView Cloud account, click on the ? icon at upper right to go to the Support page.
 * Select Downloads and elect to download the RTView DataServer to your computer.
 * Unzip the downloaded **RTViewDataServer_?.?.?.?.zip** file to a directory of your choice.
@@ -60,7 +62,7 @@ At any time you can stop the server:
 stop_server           (or ./stop_server.sh in Linux)
 ```
 
-NOTE: For convenience,and for production deployments, the RTView DataServer is available on the Google Cloud Marketplace. Simply go to the URL below in your browser:
+NOTE: For convenience, or for production deployments, the RTView DataServer is also available on the Google Cloud Marketplace. Simply go to the URL below in your browser:
 ```
     https://cloud.google.com/marketplace/
 ```
