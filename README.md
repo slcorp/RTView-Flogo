@@ -66,7 +66,7 @@ NOTE: For convenience, or for production deployments, the RTView DataServer is a
 
 * [RTView Data Server on Google Cloud Marketplace](https://console.cloud.google.com/marketplace/details/sl-corp/rtview-dataserver?q=rtview%20dataserver&id=35a6b7b2-f1f3-4a04-87fb-f6047b9ea0b0)
 
-Select Explore Marketplace and search for RTView. Select the RTView DataServer to see your options for launching an instance in your own Google Cloud account with a single click. This version provides persistent data storage and is fully enabled with all advanced features of RTView.
+Here you can see the options for launching an instance in your own Google Cloud account with a single click. This version provides persistent data storage and is fully enabled with all advanced features of RTView.
 
 ## Run the define_caches program
 
