@@ -61,7 +61,7 @@ stop_server           (or ./stop_server.sh in Linux)
 ```
 ## Run the define_caches program
 
-Clone the RTView-Flogo rep to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache so it can be displayed within RTView Cloud.
+Clone the RTView-Flogo repo to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program defines a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache for display within RTView Cloud.
 
 To install the define_caches program:
 ```
