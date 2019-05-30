@@ -73,7 +73,7 @@ To start the program:
 ```
 node define_caches.js
 ```
-This program can be modified to data structures specific to your application.
+This program can be modified to define data structures specific to your application.
 Note that this example makes use of a node package containing utility functions for communicating with RTView. This 'rtview-utils' package is referenced in the package.json file and is loaded automatically as part of the npm install.
 
 Documentation can be found at:   [rtview-utils documentation](https://www.npmjs.com/package/rtview-utils)
