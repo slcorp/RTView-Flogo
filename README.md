@@ -59,21 +59,21 @@ At any time you can stop the server:
 ```
 stop_server           (or ./stop_server.sh in Linux)
 ```
-## Download and run the RTView-JavaScript connector program
+## Run the define_caches program
 
-Clone the RTView-JavaScript to your local computer and follow the steps below to install and run the RTView Simple Example program. This simple Node.js program creates data for a few sensors and populates the RTView DataServer, which provides current and historical caching of incoming metric values for display purposes. Our use of the word connector in reference to this script is due to the fact that in a non-simulated scenario, one of the tasks that this script will be in charge of is to connect to the actual source of data.
+Clone the RTView-Flogo rep to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache so it can be displayed within RTView Cloud.
 
-To install the connector program:
+To install the define_caches program:
 ```
-cd RTView-JavaScript
+cd RTView-Flogo/define_caches
 
 npm install
 ```
 To start the program:
 ```
-node simple-example
+node define_caches.js
 ```
-This program can be modified to bring in custom data specific to your application.
+This program can be modified to data structures specific to your application.
 Note that this example makes use of a node package containing utility functions for communicating with RTView. This 'rtview-utils' package is referenced in the package.json file and is loaded automatically as part of the npm install.
 
 Documentation can be found at:   [rtview-utils documentation](https://www.npmjs.com/package/rtview-utils)
