@@ -6,25 +6,26 @@ Project Flogo provides powerful tools to build microservices with an ultralight 
 
 RTView is a real-time data management, visualization and analytics engine provided by SL Corporation (www.sl.com). It is used by organizations worldwide as a key component of mission-critical monitoring and control systems, built around various middleware, infrastructure, telemetry and IoT data sources.
 
-This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be either built-in data collected about Flogo Events, Instances, and Tasks.  Additionally, the user may define data tables that are specific to the application being monitored.
+This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be built-in data collected about Flogo Events, Instances, and Tasks. Additionally, the user may define data tables that are specific to the application being monitored.
 
 One of the sample displays created in this example is shown below:
 
-![](SensorData.jpg)
+![](images/SensorData.jpg)
 
 By following the steps described below you will:
 
-* Create an account on RTView Cloud.
-* Download and run an RTView DataServer on your local computer, which will provide real-time data caching and historical archival.
-* Run a Node.js program that simulates a few temperature/humidity sensors and populates the RTView DataServer.
-* Import a sample display into RTView Cloud, showing real-time data coming from the Node.js program.
+* Create an account on RTView Cloud
+* Download and run an RTView DataServer on your local computer or in a cloud service
+* Run a Node.js program that defines a few data structures within the RTView DataServer
+* Configure and Run the Flogo sample application, instrumented with RTView
+* Import a sample display into RTView Cloud, showing real-time data coming from the Flogo program
 
 ## Requirements
 To run this project, you will need to have installed on your computer:
 ```
-Node.js version 6 or higher    (for running the program to define caches)
-
 Java version 1.8 or higher     (if you are running the DataServer locally)
+
+Node.js version 6 or higher    (for running the program to define caches)
 ```
 
 ## Create an RTView Cloud account
