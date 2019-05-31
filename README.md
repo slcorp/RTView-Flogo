@@ -6,11 +6,11 @@ Project Flogo provides powerful tools to build microservices with an ultralight 
 
 RTView is a real-time data management, visualization and analytics engine provided by SL Corporation (www.sl.com). It is used by organizations worldwide as a key component of mission-critical monitoring and control systems, built around various middleware, infrastructure, telemetry and IoT data sources.
 
-This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be built-in data collected about Flogo Events, Instances, and Tasks. Additionally, the user may define data tables that are specific to the application being monitored.
+This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be built-in data collected about Flogo Events, Instances, and Tasks. Additionally, the user may define data tables that are specific to the application being monitored.Within RTView, the collected data may then be correlated and integrated with data from many other sources supported by RTView, including most TIBCO messaging and integration products.
 
 One of the sample displays created in this example is shown below:
 
-![](images/SensorData.jpg)
+![](images/SimpleFlogoExample.jpg)
 
 By following the steps described below you will:
 
