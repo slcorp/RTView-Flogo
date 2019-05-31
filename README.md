@@ -34,9 +34,9 @@ Note that you are automatically placed into your own private organization (e.g. 
 The RTView DataServer is the data management component that provides in-memory caching and optional archival to persistent storage. Data stored there may be consumed by displays, dashboards, reports and alerts provided by a visualization and analytics tool such as RTView Cloud. You can download and launch the RTView DataServer in your own environment, or you can elect a single-click deployment in one of several common Cloud Platforms.
 
 If you would like to run the RTView DataServer in your own environment, follow the instructons below. 
-
+```
 Note: You will need Java version 1.8 or higher to run this locally
-
+```
 * From your RTView Cloud account, click on the ? icon at upper right to go to the Support page.
 * Select Downloads and elect to download the RTView DataServer to your computer.
 * Unzip the downloaded **RTViewDataServer_?.?.?.?.zip** file to a directory of your choice.
@@ -66,9 +66,9 @@ Here you can see the options for launching an instance in your own Google Cloud 
 ## Run the define_caches program
 
 Clone the RTView-Flogo repo to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program defines a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache for display within RTView Cloud.
-
+```
 Note: You will need Node.js version 6 or higher to run this program
-
+```
 To install the define_caches program:
 ```
 cd RTView-Flogo/define_caches
