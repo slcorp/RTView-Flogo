@@ -6,27 +6,26 @@ Project Flogo provides powerful tools to build microservices with an ultralight 
 
 RTView is a real-time data management, visualization and analytics engine provided by SL Corporation (www.sl.com). It is used by organizations worldwide as a key component of mission-critical monitoring and control systems, built around various middleware, infrastructure, telemetry and IoT data sources.
 
-This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be either built-in data collected about Flogo Events, Instances, and Tasks.  Additionally, the user may define data tables that are specific to the application being monitored.
-
-The RTView DataServer is the data management component that provides in-memory caching and archival to persistent storage. Data stored there may be consumed by displays, dashboards, reports and alerts provided by a visualization and analytics tool such as RTView Cloud.
+This `RTView-Flogo` repository provides instructions and examples showing how to push real-time monitoring data from a Flogo application into an instance of an RTView DataServer and how to use RTView Cloud to create custom dashboards to display the data in real-time. The data shown can be built-in data collected about Flogo Events, Instances, and Tasks. Additionally, the user may define data tables that are specific to the application being monitored.
 
 One of the sample displays created in this example is shown below:
 
-![](SensorData.jpg)
+![](images/SensorData.jpg)
 
 By following the steps described below you will:
 
-* Create an account on RTView Cloud.
-* Download and run an RTView DataServer on your local computer, which will provide real-time data caching and historical archival.
-* Run a Node.js program that simulates a few temperature/humidity sensors and populates the RTView DataServer.
-* Import a sample display into RTView Cloud, showing real-time data coming from the Node.js program.
+* Create an account on RTView Cloud
+* Download and run an RTView DataServer on your local computer or in a cloud service
+* Run a Node.js program that defines a few data structures within the RTView DataServer
+* Configure and Run the Flogo sample application, instrumented with RTView
+* Import a sample display into RTView Cloud, showing real-time data coming from the Flogo program
 
 ## Requirements
 To run this project, you will need to have installed on your computer:
 ```
-Node.js version 6 or higher
+Java version 1.8 or higher     (if you are running the DataServer locally)
 
-Java version 1.7 or higher
+Node.js version 6 or higher    (for running the program to define caches)
 ```
 
 ## Create an RTView Cloud account
@@ -39,6 +38,10 @@ An RTView Cloud account provides the tools for creating, viewing and publishing 
 Note that you are automatically placed into your own private organization (e.g. JohnSPrivateOrg).
 	
 ## Download and run the RTView DataServer	
+
+The RTView DataServer is the data management component that provides in-memory caching and optional archival to persistent storage. Data stored there may be consumed by displays, dashboards, reports and alerts provided by a visualization and analytics tool such as RTView Cloud. You can download and launch the RTView DataServer in your own environment, or you can elect a single-click deployment in one of several common Cloud Platforms.
+
+If you would like to run the RTView DataServer in your own environment, follow the instructons below. 
 
 * From your RTView Cloud account, click on the ? icon at upper right to go to the Support page.
 * Select Downloads and elect to download the RTView DataServer to your computer.
@@ -59,21 +62,28 @@ At any time you can stop the server:
 ```
 stop_server           (or ./stop_server.sh in Linux)
 ```
-## Download and run the RTView-JavaScript connector program
 
-Clone the RTView-JavaScript to your local computer and follow the steps below to install and run the RTView Simple Example program. This simple Node.js program creates data for a few sensors and populates the RTView DataServer, which provides current and historical caching of incoming metric values for display purposes. Our use of the word connector in reference to this script is due to the fact that in a non-simulated scenario, one of the tasks that this script will be in charge of is to connect to the actual source of data.
+NOTE: For convenience, or for production deployments, the RTView DataServer is also available on the Google Cloud Marketplace. Simply go to the URL below in your browser:
 
-To install the connector program:
+* [RTView Data Server on Google Cloud Marketplace](https://console.cloud.google.com/marketplace/details/sl-corp/rtview-dataserver?q=rtview%20dataserver&id=35a6b7b2-f1f3-4a04-87fb-f6047b9ea0b0)
+
+Here you can see the options for launching an instance in your own Google Cloud account with a single click. This version provides persistent data storage and is fully enabled with all advanced features of RTView.
+
+## Run the define_caches program
+
+Clone the RTView-Flogo repo to your local computer and follow the steps below to install and run the RTView define_caches program. This simple Node.js program defines a simple cache structure in the target DataServer. The sample Flogo application will transmit data to this cache for display within RTView Cloud.
+
+To install the define_caches program:
 ```
-cd RTView-JavaScript
+cd RTView-Flogo/define_caches
 
 npm install
 ```
 To start the program:
 ```
-node simple-example
+node define_caches.js
 ```
-This program can be modified to bring in custom data specific to your application.
+This program can be modified to define data structures specific to your application.
 Note that this example makes use of a node package containing utility functions for communicating with RTView. This 'rtview-utils' package is referenced in the package.json file and is loaded automatically as part of the npm install.
 
 Documentation can be found at:   [rtview-utils documentation](https://www.npmjs.com/package/rtview-utils)
