@@ -88,18 +88,18 @@ Note that this example makes use of a node package containing utility functions 
 
 Documentation can be found at:   [rtview-utils documentation](https://www.npmjs.com/package/rtview-utils)
 
-## Import and view the sample display
+## Import and View the Sample Display in RTView Cloud
 
 * In a browser, go to [RTView Cloud](http://rtviewcloud.sl.com/).
 
-* Define a connection to the RTView DataServer running on your local system:
+* Define a connection to the RTView DataServer (running locally or in cloud service):
 ```
 On the RTView Cloud top menu bar, select Data.
 Select the Add RTView Server button.
 In the Add RTView Server dialog enter:
 
 	Name:       SIMPLE-EXAMPLE-SERVER
-	Host/URL:   http://localhost:3270/rtvquery
+	Host/URL:   http://localhost:3270/rtvquery     (or other URL)
 
 Click on Save Added Servers.
 ```
@@ -116,8 +116,8 @@ Close the dialog.
 On the RTView Cloud top menu bar, click on Design to invoke the RTDraw visual editing tool.
 Select the File dropdown menu and click on Import.
 Select "as Private". 
-In the file browser, navigate to the RTView-JavaScript directory within this project on your computer.
-Select the SimpleExample.json and click Open.
+In the file browser, navigate to the RTView-Flogo/displays directory within this project on your computer.
+Select the SimpleFlogoExample file and click Open.
 ```
 * View or edit the sample display:
 ```
@@ -128,9 +128,9 @@ This sample display is configured to connect to your local RTView data server an
 You can experiment with the editing features of RTDraw to make changes to these displays or create your own.
 
 ## Achieved Goals
-In this RTView JavaScript you will have achieved the following: 
-* Seen how easy it is to display user data in graphical and highly configurable displays in the Cloud.
-* Launched the simple node program used to create and send data to RTView.
+In this RTView-Flogo project you will have achieved the following: 
+* Seen how easy it is to display data collected from a Flogo application in graphical and highly configurable displays in the Cloud.
+* Launched a simple node program to initialize data structures within RTView.
 * Seen how users are able to view or enhance a sample RTView display or create new displays.
 
 **Feel free to experiment with, modify or enhance this project, and share your experience, comments and suggestions with us. Please fork this repo and submit a pull request for any changes you would like to suggest.**
