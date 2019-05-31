@@ -129,7 +129,7 @@ You can experiment with the editing features of RTDraw to make changes to these 
 
 ## Achieved Goals
 In this RTView-Flogo project you will have achieved the following: 
-* Seen how easy it is to display data collected from a Flogo application in graphical and highly configurable displays in the Cloud.
+* Seen how to collect real-time data from a Flogo application and present the data in configurable displays in the Cloud.
 * Launched a simple node program to initialize data structures within RTView.
 * Seen how users are able to view or enhance a sample RTView display or create new displays.
 
