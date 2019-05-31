@@ -88,6 +88,15 @@ Note that this example makes use of a node package containing utility functions 
 
 Documentation can be found at:   [rtview-utils documentation](https://www.npmjs.com/package/rtview-utils)
 
+## Configure and Run the Flogo Sample Application
+
+Instructions to be provided here !
+
+* do this
+* do that
+* do the other thing
+
+
 ## Import and View the Sample Display in RTView Cloud
 
 * In a browser, go to [RTView Cloud](http://rtviewcloud.sl.com/).
