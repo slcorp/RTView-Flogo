@@ -129,8 +129,8 @@ You can experiment with the editing features of RTDraw to make changes to these 
 
 ## Achieved Goals
 In this RTView-Flogo project you will have achieved the following: 
-* Seen how to collect real-time data from a Flogo application and present the data in configurable displays in the Cloud.
-* Launched a simple node program to initialize data structures within RTView.
+* Seen how to collect real-time data from a Flogo application and transmit it to RTView for caching and archival.
+* Learned how to present the real-time data in highly configurable displays within RTView Cloud.
 * Seen how users are able to view or enhance a sample RTView display or create new displays.
 
 **Feel free to experiment with, modify or enhance this project, and share your experience, comments and suggestions with us. Please fork this repo and submit a pull request for any changes you would like to suggest.**
