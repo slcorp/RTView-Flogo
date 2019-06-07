@@ -97,8 +97,6 @@ Instructions to be provided here !
 * from $GOPATH/src/OrderDemo/bin execute OrderDemo
 
 
-
-
 ## Import and View the Sample Display in RTView Cloud
 
 * In a browser, go to [RTView Cloud](http://rtviewcloud.sl.com/).
