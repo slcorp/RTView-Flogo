@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+type MyActivity struct {
+	metadata *activity.Metadata
+}
+
 func NewActivity(metadata *activity.Metadata) activity.Activity {
 	return &MyActivity{metadata: metadata}
 }
