@@ -1,0 +1,58 @@
+{
+    "modifiedDate": "2019-06-07T20:57:30.401Z",
+    "viewport": {
+        "x": 0,
+        "y": -375,
+        "scale": 1
+    },
+    "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 600,
+        "resizable": false
+    },
+    "localVars": {},
+    "styleSheet": {},
+    "bgColor": "#ffffff",
+    "layout": "",
+    "version": "1.62.0",
+    "nodeDataArray": [
+        {
+            "key": 1,
+            "category": "extern-custom-table",
+            "bgVisible": true,
+            "size": "677 398",
+            "rowSeriesFlag": true,
+            "bgBorderVisible": true,
+            "bgBorderColor": "#cccccc",
+            "bgBorderWidth": 1,
+            "bgBorderRadius": 0,
+            "pos": "348.5 220",
+            "bindings": {
+                "component": {
+                    "url": "MY-LOCAL-SERVER",
+                    "cache": "fgFlowPerformance",
+                    "table": "current",
+                    "value": "*",
+                    "timeRange": -1,
+                    "filter": {
+                        "flowName": "*",
+                        "hostName": "*"
+                    },
+                    "type": "cache_advanced"
+                }
+            },
+            "columns": {
+                "Expired": {
+                    "title": "",
+                    "width": 0,
+                    "format": "",
+                    "align": "default",
+                    "hidden": true
+                }
+            }
+        }
+    ],
+    "linkDataArray": []
+}
