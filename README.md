@@ -10,8 +10,10 @@ This `RTView-Flogo` repository provides instructions and examples showing how to
 
 One of the sample displays created in this example is shown below:
 
+Current Flow Performance Chart
 ![](images/Flogo1.png)
 
+Current Flow Performance Table
 ![](images/Flogo2.png)
 
 By following the steps described below you will:
@@ -92,9 +94,8 @@ Instructions to be provided here !
 
 * After RTView Dataserver installation and cache creation
 * install go framework https://golang.org/doc/install
-* install git framework https://git-scm.com/download
 * install Flogo Framework https://tibcosoftware.github.io/flogo/getting-started/getting-started-cli/
-* download performance_demo_orders.json and save it in the $GOPATH/src directory
+* download [performance_demo_orders.json](https://github.com/slcorp/RTView-Flogo/blob/master/demo/performance_demo_order.json) 
 * Create the Flogo Project "flogo create -f performance_demo_orders.json OrderDemo"
 * Build the Demo from $GOPATH/src/OrderDemo.  "flogo build -e"
 * from $GOPATH/src/OrderDemo/bin execute OrderDemo
