@@ -1,0 +1,52 @@
+{
+    "modifiedDate": "2019-06-07T22:54:55.810Z",
+    "viewport": {
+        "x": 0,
+        "y": -264.2,
+        "scale": 1
+    },
+    "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 600,
+        "resizable": false
+    },
+    "localVars": {},
+    "styleSheet": {},
+    "bgColor": "#ffffff",
+    "layout": "",
+    "version": "1.62.0",
+    "nodeDataArray": [
+        {
+            "key": 10,
+            "category": "extern-barchart",
+            "bgVisible": true,
+            "size": "528 596",
+            "horizVisFlag": false,
+            "legendFlag": true,
+            "legendPos": "right",
+            "draw3D": false,
+            "pos": "270 300",
+            "bgBorderVisible": false,
+            "bgBorderColor": "#cccccc",
+            "bgBorderWidth": 1,
+            "bgBorderRadius": 0,
+            "bindings": {
+                "component": {
+                    "cache": "fgFlowPerformance",
+                    "value": "duration",
+                    "url": "MY-LOCAL-SERVER",
+                    "table": "current",
+                    "filter": {
+                        "hostName": "*",
+                        "flowName": "*"
+                    },
+                    "type": "cache"
+                }
+            },
+            "legendVisFlag": false
+        }
+    ],
+    "linkDataArray": []
+}

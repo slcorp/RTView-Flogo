@@ -1,0 +1,29 @@
+{
+  "name": "RTViewSleeper",
+  "version": "0.1.0",
+  "title": "Sleeper Timer",
+  "type": "flogo:activity",
+  "description": "An activity to Sleep for a random number of Seconds",
+  "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+  "author": "Everett Williams",
+  "inputs":[
+    {
+      "name": "Min",
+      "type": "any",
+      "required": true
+    },
+   {
+      "name": "Rnd",
+      "type": "any",
+      "required": true
+    } 
+],
+  "outputs": [
+    {
+      "name": "starttime",
+      "type": "any"
+    }
+  ]
+}
+
+

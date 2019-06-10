@@ -1,0 +1,27 @@
+{
+  "name": "PostToCache",
+  "version": "0.1.0",
+  "title": "Update RTVcache",
+  "type": "flogo:activity",
+  "description": "Posting Performance information to the RTVcache",
+  "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+  "author": "Everett Williams",
+  "inputs":[
+    {
+      "name": "Target",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "StartTime",
+      "type": "any",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "string"
+    }
+  ]
+}

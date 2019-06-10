@@ -1,0 +1,410 @@
+{
+  "name": "PerformanceDemo",
+  "type": "flogo:app",
+  "version": "0.0.1",
+  "appModel": "1.0.0",
+  "triggers": [
+    {
+      "id": "timer",
+      "ref": "github.com/TIBCOSoftware/flogo-contrib/trigger/timer",
+      "name": "Timer",
+      "description": "Simple Timer trigger",
+      "settings": {},
+      "handlers": [
+        {
+          "action": {
+            "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
+            "data": {
+              "flowURI": "res://flow:update_database"
+            }
+          },
+          "settings": {
+            "repeating": "true",
+            "notImmediate": "false",
+            "seconds": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timer_1",
+      "ref": "github.com/TIBCOSoftware/flogo-contrib/trigger/timer",
+      "name": "Timer (1)",
+      "description": "Simple Timer trigger",
+      "settings": {},
+      "handlers": [
+        {
+          "action": {
+            "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
+            "data": {
+              "flowURI": "res://flow:process_order"
+            }
+          },
+          "settings": {
+            "repeating": "true",
+            "notImmediate": "false",
+            "seconds": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timer_2",
+      "ref": "github.com/TIBCOSoftware/flogo-contrib/trigger/timer",
+      "name": "Timer (2)",
+      "description": "Simple Timer trigger",
+      "settings": {},
+      "handlers": [
+        {
+          "action": {
+            "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
+            "data": {
+              "flowURI": "res://flow:send_customer_survey"
+            }
+          },
+          "settings": {
+            "repeating": "false",
+            "notImmediate": "true",
+            "startDate": "2018-01-01T12:00:00Z00:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timer_3",
+      "ref": "github.com/TIBCOSoftware/flogo-contrib/trigger/timer",
+      "name": "Timer (3)",
+      "description": "Simple Timer trigger",
+      "settings": {},
+      "handlers": [
+        {
+          "action": {
+            "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
+            "data": {
+              "flowURI": "res://flow:send_pick_ticket"
+            }
+          },
+          "settings": {
+            "repeating": "true",
+            "notImmediate": "false",
+            "seconds": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timer_4",
+      "ref": "github.com/TIBCOSoftware/flogo-contrib/trigger/timer",
+      "name": "Timer (4)",
+      "description": "Simple Timer trigger",
+      "settings": {},
+      "handlers": [
+        {
+          "action": {
+            "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
+            "data": {
+              "flowURI": "res://flow:send_invoice"
+            }
+          },
+          "settings": {
+            "repeating": "true",
+            "notImmediate": "false",
+            "seconds": "10"
+          }
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "flow:update_database",
+      "data": {
+        "name": "UpdateDatabase",
+        "tasks": [
+          {
+            "id": "StartTimer_2",
+            "name": "Start Timer",
+            "description": "An activity to return the start time of for the timer.",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
+            }
+          },
+          {
+            "id": "Sleeper_3",
+            "name": "Sleeper Timer",
+            "description": "execute for 3000-4000 millis",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+              "input": {
+                "Min": 3000,
+                "Rnd": 500
+              }
+            }
+          },
+          {
+            "id": "UpdateCache_4",
+            "name": "Post to RTVcache",
+            "description": "Posting data to the RTVcache",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+              "input": {
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+              },
+              "mappings": {
+                "input": [
+                  {
+                    "type": "assign",
+                    "value": "$activity[StartTimer_2].starttime",
+                    "mapTo": "StartTime"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "links": [
+          {
+            "from": "StartTimer_2",
+            "to": "Sleeper_3"
+          },
+          {
+            "from": "Sleeper_3",
+            "to": "UpdateCache_4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flow:process_order",
+      "data": {
+        "name": "ProcessOrder",
+        "tasks": [
+          {
+            "id": "StartTimer_2",
+            "name": "Start Timer",
+            "description": "An activity to return the start time of for the timer.",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
+            }
+          },
+          {
+            "id": "Sleeper_3",
+            "name": "Sleeper Timer",
+            "description": "An activity to Sleep for a random number of Seconds",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+              "input": {
+                "Min": 500,
+                "Rnd": 500
+              }
+            }
+          },
+          {
+            "id": "UpdateCache_4",
+            "name": "Post to RTVcache",
+            "description": "Posting data to the RTVcache",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+              "input": {
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+              },
+              "mappings": {
+                "input": [
+                  {
+                    "type": "assign",
+                    "value": "$activity[StartTimer_2].starttime",
+                    "mapTo": "StartTime"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "links": [
+          {
+            "from": "StartTimer_2",
+            "to": "Sleeper_3"
+          },
+          {
+            "from": "Sleeper_3",
+            "to": "UpdateCache_4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flow:send_customer_survey",
+      "data": {
+        "name": "SendCustomerSurvey",
+        "tasks": [
+          {
+            "id": "StartTimer_2",
+            "name": "Start Timer",
+            "description": "An activity to return the start time of for the timer.",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
+            }
+          },
+          {
+            "id": "Sleeper_3",
+            "name": "Sleeper Timer",
+            "description": "An activity to Sleep for a random number of Seconds",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+              "input": {
+                "Min": 2000,
+                "Rnd": 1000
+              }
+            }
+          },
+          {
+            "id": "UpdateCache_4",
+            "name": "Post to RTVcache",
+            "description": "Posting data to the RTVcache",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+              "input": {
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+              },
+              "mappings": {
+                "input": [
+                  {
+                    "type": "assign",
+                    "value": "$activity[StartTimer_2].starttime",
+                    "mapTo": "StartTime"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "links": [
+          {
+            "from": "StartTimer_2",
+            "to": "Sleeper_3"
+          },
+          {
+            "from": "Sleeper_3",
+            "to": "UpdateCache_4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flow:send_pick_ticket",
+      "data": {
+        "name": "SendPickTicket",
+        "tasks": [
+          {
+            "id": "StartTimer_2",
+            "name": "Start Timer",
+            "description": "An activity to return the start time of for the timer.",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
+            }
+          },
+          {
+            "id": "Sleeper_3",
+            "name": "Sleeper Timer",
+            "description": "An activity to Sleep for a random number of Seconds",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+              "input": {
+                "Min": 1500,
+                "Rnd": 1250
+              }
+            }
+          },
+          {
+            "id": "UpdateCache_4",
+            "name": "Post to RTVcache",
+            "description": "Posting data to the RTVcache",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+              "input": {
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+              },
+              "mappings": {
+                "input": [
+                  {
+                    "type": "assign",
+                    "value": "$activity[StartTimer_2].starttime",
+                    "mapTo": "StartTime"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "links": [
+          {
+            "from": "StartTimer_2",
+            "to": "Sleeper_3"
+          },
+          {
+            "from": "Sleeper_3",
+            "to": "UpdateCache_4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "flow:send_invoice",
+      "data": {
+        "name": "SendInvoice",
+        "tasks": [
+          {
+            "id": "StartTimer_2",
+            "name": "Start Timer",
+            "description": "An activity to return the start time of for the timer.",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
+            }
+          },
+          {
+            "id": "Sleeper_3",
+            "name": "Sleeper Timer",
+            "description": "An activity to Sleep for a random number of Seconds",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/Sleeper",
+              "input": {
+                "Min": 1000,
+                "Rnd": 1750
+              }
+            }
+          },
+          {
+            "id": "UpdateCache_4",
+            "name": "Post to RTVcache",
+            "description": "Posting data to the RTVcache",
+            "activity": {
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
+              "input": {
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+              },
+              "mappings": {
+                "input": [
+                  {
+                    "type": "assign",
+                    "value": "$activity[StartTimer_2].starttime",
+                    "mapTo": "StartTime"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "links": [
+          {
+            "from": "StartTimer_2",
+            "to": "Sleeper_3"
+          },
+          {
+            "from": "Sleeper_3",
+            "to": "UpdateCache_4"
+          }
+        ]
+      }
+    }
+  ]
+}
