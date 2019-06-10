@@ -10,7 +10,9 @@ This `RTView-Flogo` repository provides instructions and examples showing how to
 
 One of the sample displays created in this example is shown below:
 
-![](images/SimpleFlogoExample.jpg)
+![](images/Flogo1.jpg)
+
+![](images/Flogo2.jpg)
 
 By following the steps described below you will:
 
