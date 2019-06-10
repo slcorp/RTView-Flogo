@@ -90,6 +90,7 @@ Instructions to be provided here !
 
 * After RTView Dataserver installation and cache creation
 * install go framework https://golang.org/doc/install
+* install git framework https://git-scm.com/download
 * install Flogo Framework https://tibcosoftware.github.io/flogo/getting-started/getting-started-cli/
 * download performance_demo_orders.json and save it in the $GOPATH/src directory
 * Create the Flogo Project "flogo create -f performance_demo_orders.json OrderDemo"
