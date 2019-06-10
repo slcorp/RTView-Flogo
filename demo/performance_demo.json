@@ -59,7 +59,7 @@
             "name": "Start Timer",
             "description": "An activity to return the start time of for the timer.",
             "activity": {
-              "ref": "github.com/ewilliams-sl/RTViewFlogo/activity/StartTimer"
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
             }
           },
           {
@@ -97,9 +97,9 @@
             "name": "Post to RTVcache",
             "description": "Posting data to the RTVcache",
             "activity": {
-              "ref": "github.com/ewilliams-sl/UpdateRTView/activity/UpdateCache",
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
               "input": {
-                "Target": "http://10.0.0.17:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
               },
               "mappings": {
                 "input": [
@@ -139,7 +139,7 @@
             "name": "Start Timer",
             "description": "An activity to return the start time of for the timer.",
             "activity": {
-              "ref": "github.com/ewilliams-sl/RTViewFlogo/activity/StartTimer"
+              "ref": "github.com/slcorp/RTView-Flogo/activity/StartTimer"
             }
           },
           {
@@ -212,9 +212,9 @@
             "name": "Post to RTVcache",
             "description": "Posting data to the RTVcache",
             "activity": {
-              "ref": "github.com/ewilliams-sl/UpdateRTView/activity/UpdateCache",
+              "ref": "github.com/slcorp/RTView-Flogo/activity/UpdateCache",
               "input": {
-                "Target": "http://10.0.0.17:3270/rtvpost/rtview/json/data/fgFlowPerformance"
+                "Target": "http://localhost:3270/rtvpost/rtview/json/data/fgFlowPerformance"
               },
               "mappings": {
                 "input": [
